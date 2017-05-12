@@ -6,20 +6,18 @@ import { EmployeeService } from '../Employee-Service/employee.service';
   // templateUrl: './employee-details.component.html',
   template: `
       <ul>
-        <li *ngFor="let employee of employees">
-          {{employee.id}}.{{ employee.name}} - {{ employee.gender}}
-        </li>
+
       </ul>
   `,
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  employees = [];
-  constructor(private _employeeService: EmployeeService) {}
+  // employees = [];
+  // constructor(private _employeeService: EmployeeService) {}
   
-  //http get all employees
+  // //http get all employees
   ngOnInit() {
-    this.employees = this._employeeService.getEmployees();
+  //   this.employees = this._employeeService.getEmployees();
   }
 }
