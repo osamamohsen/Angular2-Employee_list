@@ -5,6 +5,7 @@ import { EmployeeService } from '../Employee-Service/employee.service';
   selector: 'app-employee-list',
   // templateUrl: './employee-list.component.html',
   template: `
+      <h2>Employee List</h2>
       <ul>
         <li *ngFor="let employee of employees">
           {{ employee.name}}
@@ -20,8 +21,7 @@ export class EmployeeListComponent implements OnInit {
   
   //http get all employees
   ngOnInit() {
-    console.log("HERE");
     this._employeeService.getEmployees()
-        .subscribe(resEmployeeData => this.employees = resEmployeeData);
+        .subscribe(resEmployeeData => this.employees = resEmployeeData.employee);
   }
 }

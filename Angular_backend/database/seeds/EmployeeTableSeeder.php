@@ -15,7 +15,7 @@ class EmployeeTableSeeder extends Seeder
         $faker = Factory::create();
         for($i=0;$i<10;$i++){
             Employee::create([
-                'name' => $faker->titleMale,
+                'name' => $faker->name,
                 'gender' => 'male'
             ]);
         }

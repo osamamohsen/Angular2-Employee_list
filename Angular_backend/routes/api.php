@@ -18,5 +18,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::get('/employees', function () {
-    return [ "res" => "now"];
+    return response()->json(["employee" => App\Employee::all()]);
 });
