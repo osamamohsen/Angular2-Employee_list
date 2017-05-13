@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../Employee-Service/employee.service';
+import { EmployeeService } from '../Service/employee.service';
 
 @Component({
   selector: 'app-employee-list',
   // templateUrl: './employee-list.component.html',
   template: `
+      <a routerLink="/employees/details" routerLinkActive="active">Employees Details</a>
       <h2>Employee List</h2>
       <h3>{{ errorMsg }}</h3>
       <ul>

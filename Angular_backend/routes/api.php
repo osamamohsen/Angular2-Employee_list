@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,4 +17,12 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/employees', function () {
     return response()->json(["employee" => App\Employee::all()]);
+});
+
+Route::get('/departments', function () {
+    return response()->json(["department" => App\Department::all()]);
+});
+
+Route::get('/departments/{id}', function ($id) {
+    return response()->json(["department" => App\Department::find($id)]);
 });
