@@ -38,3 +38,8 @@ li:hover > span {
     color: black;
     text-align: center;
 }
+
+li.selected{
+    background-color: #CFD8DC;
+    color: blue;
+}

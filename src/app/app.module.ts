@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents //here all component
+    routingComponents,
+    PageNotFoundComponent //here all component
   ],
   imports: [
     BrowserModule,
